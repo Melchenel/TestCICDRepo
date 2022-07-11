@@ -2,10 +2,9 @@ package com.example.api.controllers;
 
 import com.example.api.model.Student;
 import com.example.api.services.StudentService;
+import com.example.api.services.StudentServiceImpl;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
-import java.time.Month;
 import java.util.List;
 
 @RestController
@@ -20,6 +19,7 @@ public class StudentsController {
 
     @GetMapping(path = "list")
     public List<Student> list() {
+        System.out.println(studentService.getClass().getName());
         return studentService.list();
     }
 
