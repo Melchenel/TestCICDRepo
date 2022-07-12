@@ -11,33 +11,33 @@ import java.util.List;
 @RequestMapping("v1/students")
 public class StudentsController {
 
-    private final StudentService studentService;
+   // private final StudentService studentService;
 
-    public StudentsController(StudentService studentService) {
-        this.studentService = studentService;
-    }
+//    public StudentsController(StudentService studentService) {
+//        this.studentService = studentService;
+//    }
 
-    @GetMapping(path = "list")
-    public List<Student> list() {
-        System.out.println(studentService.getClass().getName());
-        return studentService.list();
-    }
-
-    @PostMapping(path = "item")
-    public List<Student> add(@RequestBody Student student) {
-        studentService.add(student);
-        return studentService.list();
-    }
-
-    @DeleteMapping(path = "item/{studentId}")
-    public void delete(@PathVariable Long studentId) {
-        studentService.delete(studentId);
-    }
-
-    @PutMapping(path = "item")
-    public void update(@RequestBody Student student) {
-        studentService.update(student);
-    }
-
+//    @GetMapping(path = "list")
+//    public List<Student> list() {
+//        System.out.println(studentService.getClass().getName());
+//        return studentService.list();
+//    }
+//
+//    @PostMapping(path = "item")
+//    public List<Student> add(@RequestBody Student student) {
+//        studentService.add(student);
+//        return studentService.list();
+//    }
+//
+//    @DeleteMapping(path = "item/{studentId}")
+//    public void delete(@PathVariable Long studentId) {
+//        studentService.delete(studentId);
+//    }
+//
+//    @PutMapping(path = "item")
+//    public void update(@RequestBody Student student) {
+//        studentService.update(student);
+//    }
+//
 
 }

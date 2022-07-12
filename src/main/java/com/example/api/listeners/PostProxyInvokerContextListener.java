@@ -4,6 +4,7 @@ import com.example.api.annotations.PostProxy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ApplicationContextEvent;
@@ -40,7 +41,7 @@ public class PostProxyInvokerContextListener implements ApplicationListener<Cont
                     }
                 }
             } catch (Exception e) {
-                System.out.println("Somethitg went wrong");
+                System.out.println("Something went wrong");
             }
         }
     }
